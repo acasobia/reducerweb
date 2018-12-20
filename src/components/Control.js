@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+function createWarning(funcName) {
+    return ()=>console.log(funcName + 'is not difined')
+}
+
 class Control extends Component {
 
     static defaultProps={
@@ -22,7 +26,7 @@ render() {
 }
 
 Control.PropTypes = {
-         onPlus:PropTypes,func,
+         onPlus:PropTypes.func,
          onSubtrack:PropTypes.func,
          onRamdomizeColor:PropTypes.func       
             };
